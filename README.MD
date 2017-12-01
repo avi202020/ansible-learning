@@ -1,0 +1,11 @@
+Run: 
+vagrant up
+to start all these three machines:
+
+Networking:private_network
+Master:192.168.4.2
+Slave1:192.168.4.3
+Slave2:192.168.4.4
+
+Run ad hoc ansible helloworld to test the setup is working:
+`ansible all -a "/bin/echo hello" -u vagrant -i inventory.ini --private-key key/ansible_id_rsa`
